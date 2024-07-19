@@ -10,21 +10,23 @@
 
 <body>
     <div class="main-container">
+        <h2 class="title">Library</h2>
         <dialog>
-        <button autofocus>Close</button>
+        <button class="close" autofocus>Close</button>
         <form class="register" action="">
             <label for="title">Title</label>
-            <input type="text" id="title" value="">
+            <input class="input-box" type="text" id="title" value="">
             <label for="author">Author</label>
-            <input type="text" id="author" value="">
+            <input class="input-box" type="text" id="author" value="">
             <label for="pages">Pages</label>
-            <input type="text" id="pages" value="">
-            <label for="volumes">Volumes</label>
-            <input type="text" id="volumes" value="">
-            <input type="submit" value="Register">
+            <input class="input-box" type="text" id="pages" value="">
+            <span>Read?</span>
+            <input type="checkbox" id="toggle">
+            <label id="read" for="toggle"></label>
+            <input class="add" type="submit" value="+">
         </form>
         </dialog>
-        <button>Show the dialog</button>
+        <button class="add">+</button>
     </div>
     <div id="stored-books"></div>
 </body>
