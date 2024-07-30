@@ -1,30 +1,32 @@
 let myLibrary = [];
 
-function Book(title, author, pages,read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-};
+class Book {
 
-Book.prototype.isRead = function() {
-    if(this.read === false){
-        this.read = true
-        return this.read;
-    }else{
-        this.read = false;
-        return this.read
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    isRead() {
+        if (this.read === false) {
+            this.read = true;
+            return this.read;
+        } else {
+            this.read = false;
+            return this.read;
+        }
     }
 };
 
-//let test = new Book("test", "test", 11, false);
+
 
 function addBookToLibrary(title,author,pages,read) {
     const newBook = new Book(title,author,pages,read);
     myLibrary.push(newBook);
 };
 
-//addBookToLibrary("test","test",11, false);
 
 const container = document.getElementsByClassName("main-container");
 const form = document.querySelector(".register")
